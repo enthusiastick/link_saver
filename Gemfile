@@ -7,6 +7,7 @@ end
 
 gem "active_model_serializers", "~> 0.10.0"
 gem "coffee-rails", "~> 4.2"
+gem "devise"
 gem "foundation-rails"
 gem "font-awesome-rails"
 gem "haml"

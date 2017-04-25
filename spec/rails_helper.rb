@@ -5,7 +5,6 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require "spec_helper"
 require "rspec/rails"
 require "capybara/rspec"
-require "capybara/email/rspec"
 require "factory_girl"
 require "shoulda-matchers"
 require "valid_attribute"
@@ -22,6 +21,7 @@ Shoulda::Matchers.configure do |config|
 end
 
 RSpec.configure do |config|
+  config.include Devise::Test::IntegrationHelpers, type: :feature
   config.include FactoryGirl::Syntax::Methods
   config.filter_rails_from_backtrace!
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
