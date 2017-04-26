@@ -14,14 +14,14 @@ describe('Posts Index', () => {
     wrapper.unmount();
   });
 
-  describe('visiting the pokemon homepage', () => {
+  describe('visiting the post index', () => {
     beforeEach(() => {
       wrapper = mount(
         <IndexContainer />
       );
     });
 
-    it('has pokemon and their information', done => {
+    it('has links labeled by their summary', done => {
       setTimeout(() => {
         let pageText = wrapper.text();
         expect(pageText).toMatch('facebook');
