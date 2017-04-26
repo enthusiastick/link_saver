@@ -1,24 +1,27 @@
-# README
+# LinkSaver
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+LinkSaver is a simple Ruby on Rails / React.js monolith, created to demonstrate some features of JavaScript testing using a Jasmine/Enzyme test suite run via Karma.
 
-Things you may want to cover:
+To get it up and running locally:
 
-* Ruby version
+```bash
+$ git clone git@github.com:enthusiastick/link_saver.git
+$ cd link_saver
+$ bundle install
+$ rake db:create && rake db:migrate && rake db:seed
+$ rails s
+```
 
-* System dependencies
+And then (in a separate terminal tab):
 
-* Configuration
+```bash
+$ npm install
+$ npm start
+```
 
-* Database creation
+To see the JavaScript tests, you can run:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+$ npm install
+$ npm test
+```
