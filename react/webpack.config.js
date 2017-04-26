@@ -10,7 +10,12 @@ module.exports = {
     path: path.resolve(__dirname, '../app/assets/javascripts'),
     pathinfo: true
   },
-   module: {
+  externals: {
+    'react/addons': true,
+    'react/lib/ExecutionEnvironment': true,
+    'react/lib/ReactContext': true
+  },
+  module: {
     rules: [
       {
         test: /\.jsx?$/,
